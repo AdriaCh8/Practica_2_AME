@@ -4,7 +4,7 @@
 Luxer::Luxer(PinName pin) : light(pin) { 
 }
 
-float calculate_lux(){
+float Luxer::calculate_lux(){
   float count = light.read();
   float lux = (((3.3 * 500) * (count * 3.3)) - 500) / (10);
   if (lux < 0) {
